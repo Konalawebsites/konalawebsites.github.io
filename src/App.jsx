@@ -1,10 +1,20 @@
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import NavigationBar from './NavigationBar.jsx'
+import IntroductionPage from './pages/IntroductionPage.jsx'
+import BottomBar from './BottomBar.jsx'
+import { Grommet } from 'grommet'
+import { theme } from './styles/theme';
 
-import './App.css'
 
 const App = () => (
-  <div>
-    <p>Hello world</p>
-  </div>
+  <Grommet theme={theme} full>
+    <NavigationBar />
+    <Routes>
+      <Route path="/" element={<IntroductionPage />} />
+    </Routes>
+    <BottomBar />
+  </Grommet>
 )
 
 export default App
